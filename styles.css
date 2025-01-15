@@ -1,0 +1,485 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-color: #f9f9f9;
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    color: #ff6f61;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+header {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.fruit-banner-container {
+    width: 100%;
+    text-align: center;
+    background-color: white;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+}
+
+.fruit-banner-square {
+    width: 49%;
+    max-height: 150px;
+    overflow: hidden;
+    position: relative;
+    margin: 0 auto;
+}
+
+.fruit-banner {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    animation: growBanner 0.8s ease-in-out forwards;
+}
+
+@keyframes growBanner {
+    from { width: 0%; }
+    to { width: 100%; }
+}
+
+.logo-link {
+    position: absolute;
+    top: 30px;
+    left: 60px;
+    z-index: 1001;
+}
+
+.header-logo {
+    height: 100px;
+    width: auto;
+    transition: transform 0.3s ease;
+}
+
+.header-logo:hover {
+    transform: scale(1.1);
+}
+
+.facebook-link {
+    position: absolute;
+    top: 60px;
+    right: 50px;
+    z-index: 1001;
+}
+
+.facebook-icon {
+    height: 30px;
+    transition: transform 0.3s ease;
+}
+
+.facebook-icon:hover {
+    transform: scale(1.1);
+}
+
+.nav-container {
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 1000;
+}
+
+nav {
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    font-weight: bold;
+    transition: color 0.3s ease;
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.5rem;
+}
+
+nav ul li a:hover {
+    color: #ff6f61;
+}
+
+.home-icon {
+    width: 24px;
+    height: 24px;
+    fill: #333;
+}
+
+.animated-nav {
+    animation: slideIn 1s ease-out;
+}
+
+@keyframes slideIn {
+    from { transform: translateY(-100%); }
+    to { transform: translateY(0); }
+}
+
+.hero-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 20px;
+    background-color: #fff8f0;
+    min-height: 50vh;
+}
+
+.hero-left {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hero-text-container {
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hero-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #ff6f61;
+    font-family: 'Dancing Script', cursive;
+    margin-bottom: 20px;
+    white-space: nowrap;
+}
+
+.hero-description {
+    font-size: 1.5rem;
+    font-family: 'Dancing Script', cursive;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.cta-button {
+    background-color: #58375b;
+    color: #fff;
+    padding: 12px 24px;
+    border-radius: 25px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.2rem;
+    display: inline-block;
+    text-align: center;
+    box-shadow: 0px 4px 6px rgba(0,0,0,0.1);
+}
+
+.cta-button:hover {
+    background-color: #4b2c4b;
+    transform: translateY(-2px);
+    box-shadow: 0px 6px 8px rgba(0,0,0,0.2);
+}
+
+.cta-button i {
+    margin-left: 8px;
+}
+
+.hero-right {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slideshow-container {
+    max-width: 600px;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.mySlides {
+    display: none;
+}
+
+.mySlides img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.introduction-section {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #fff8f0;
+}
+
+.custom-font {
+    font-family: 'Playwrite AU SA', cursive;
+    font-size: 2rem;
+    color: #ff6f61;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.features-section {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    flex-wrap: wrap;
+}
+
+.feature {
+    width: 25%;
+    max-width: 400px;
+    overflow: hidden;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+    position: relative;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.feature.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.feature-icon {
+    width: 100%;
+    padding-bottom: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.feature-icon img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.about-section {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #fff;
+}
+
+.about-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.about-logo-text-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+}
+
+.about-image {
+    width: 12.5%;
+    max-width: 100px;
+}
+
+.about-text {
+    text-align: left;
+    padding-left: 20px;
+    border-left: 3px solid #ff6f61;
+}
+
+.about-text h2 {
+    color: #ff6f61;
+    font-size: 2rem;
+    margin-bottom: 0;
+}
+
+.about-text p {
+    font-size: 1.2rem;
+    color: #333;
+    line-height: 1.4;
+    margin-top: 5px;
+}
+
+.floating-contact-button {
+    position: fixed;
+    top: 20%;
+    right: 20px;
+    transform: translateY(-50%);
+    background-color: #ff6f61;
+    color: #fff;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 1000;
+    animation: swing 3s ease-in-out infinite;
+}
+
+.floating-contact-button:hover {
+    background-color: #e65a50;
+    transform: translateY(-50%) scale(1.1);
+}
+
+.floating-video-button {
+    position: fixed;
+    top: 30%;
+    right: 42px;
+    background-color: #4267B2;
+    color: #fff;
+    padding: 15px;
+    border: none;
+    border-radius: 50%;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 1000;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.floating-video-button:hover {
+    background-color: #365899;
+    transform: scale(1.1);
+}
+
+.video-container {
+    position: fixed;
+    top: 36%;
+    right: 10px;
+    width: 267px;
+    height: 476px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    display: none;
+}
+
+.video-container iframe {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+footer {
+    padding: 5px;
+    background-color: #58375b;
+    color: #ffffff;
+    text-align: center;
+    position: relative;
+    width: 100%;
+    z-index: 1000;
+    margin-top: 0;
+}
+
+@media (max-width: 768px) {
+    .hero-section {
+        flex-direction: column;
+        padding: 40px 20px;
+        height: auto;
+    }
+
+    .hero-left, .hero-right {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .feature {
+        width: 45%;
+        margin: 20px 0;
+    }
+
+    .header-logo {
+        height: 60px;
+    }
+
+    .facebook-icon {
+        height: 25px;
+    }
+
+    .fruit-banner {
+        max-height: 100px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header-logo {
+        height: 50px;
+    }
+
+    .facebook-icon {
+        height: 20px;
+    }
+
+    .hero-title {
+        font-size: 2rem;
+    }
+
+    .hero-description {
+        font-size: 1.2rem;
+    }
+
+    .cta-button {
+        padding: 10px 20px;
+        font-size: 1.2rem;
+    }
+
+    .floating-contact-button {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+
+    .fruit-banner {
+        max-height: 80px;
+    }
+
+    .feature {
+        width: 100%;
+    }
+
+    .custom-font {
+        font-size: 1.5rem;
+    }
+
+    .floating-video-button {
+        padding: 10px;
+        font-size: 0.9rem;
+    }
+
+    .video-container {
+        width: 200px;
+        height: 356px;
+    }
+}
+
+@keyframes swing {
+    0% { transform: rotate(0deg); }
+    10% { transform: rotate(10deg); }
+    30% { transform: rotate(-10deg); }
+    50% { transform: rotate(5deg); }
+    70% { transform: rotate(-5deg); }
+    100% { transform: rotate(0deg); }
+}
