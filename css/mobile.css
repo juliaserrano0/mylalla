@@ -1,0 +1,174 @@
+/* Styles spécifiques pour les écrans mobiles */
+@media (max-width: 768px) {
+    /* Changer la couleur de fond du body */
+    body {
+        background-color: #fff8f0; /* Utilisez la même couleur que la section Hero */
+    }
+
+    /* Barre de navigation */
+    .navbar {
+        height: 60px; /* Réduire la hauteur de la barre de navigation */
+    }
+
+    .navbar-container {
+        padding: 0 10px; /* Réduire l'espacement horizontal */
+    }
+
+    /* Masquer le menu desktop sur mobile */
+    .desktop-menu {
+        display: none;
+    }
+
+    /* Afficher le bouton hamburger */
+    .hamburger {
+        display: block;
+    }
+
+    /* Styles pour le menu mobile */
+    .mobile-menu {
+        display: none;
+        flex-direction: column;
+        gap: 10px;
+        padding: 10px 0;
+        background-color: white;
+        border-top: 1px solid #eee;
+        position: absolute;
+        top: 60px; /* Ajuster en fonction de la hauteur de la barre de navigation */
+        left: 0;
+        width: 100%;
+        transform: translateY(-100%);
+        transition: transform 0.3s ease-in-out;
+        padding-left: 20px;
+        color: #68486b;
+    }
+
+    .mobile-menu.active {
+        display: flex;
+        transform: translateY(0);
+    }
+
+    /* Réduire la taille de la bannière de fruits */
+    .fruit-banner {
+        margin-top: 60px; /* Ajuster la marge supérieure pour la barre de navigation mobile */
+        position: relative; /* Nécessaire pour positionner le logo de manière absolue */
+    }
+
+    .fruit-banner-container {
+        position: relative; /* Conteneur relatif pour positionner le logo */
+    }
+
+    /* Styles pour le logo Mylalla */
+    .logo-container {
+        position: absolute; /* Position absolue pour superposer le logo */
+        top: 90px; /* Ajuster la position verticale (déplacer le logo plus haut) */
+        left: 50%; /* Centrer horizontalement */
+        transform: translateX(-50%); /* Ajuster le centrage */
+        z-index: 10; /* Assurer que le logo est au-dessus de la bannière */
+        width: 150px; /* Réduire la taille du logo */
+    }
+
+    .logo {
+        width: 100%; /* Le logo prend toute la largeur du conteneur */
+        height: auto; /* Conserver les proportions */
+    }
+
+    /* Styles pour la bannière de fruits */
+    .fruit-banner-image {
+        width: 100%; /* La bannière prend toute la largeur disponible */
+        height: auto; /* Conserver les proportions */
+        display: block; /* Éviter les espaces indésirables */
+    }
+
+    /* Ajustement de la section Hero pour mobile */
+    .hero-section {
+        flex-direction: column; /* Texte au-dessus du carrousel */
+        padding: 20px 15px; /* Réduire l'espacement */
+        margin-top: 40px; /* Ajouter une marge supérieure pour déplacer la section vers le bas */
+    }
+
+    .hero-text-mobile {
+        display: block; /* Afficher le texte en mobile */
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .hero-left {
+        display: none; /* Masquer le texte en double */
+    }
+
+    .hero-title {
+        font-size: 2.5rem; /* Réduire la taille du titre */
+    }
+
+    .hero-description {
+        font-size: 1.5rem; /* Réduire la taille de la description */
+    }
+
+    .slideshow-container {
+        max-width: 100%; /* Pleine largeur en mobile */
+        transform: translateX(0); /* Réinitialiser le décalage */
+    }
+
+    /* Ajustement de la section Introduction pour mobile */
+    .introduction-section {
+        padding: 40px 15px; /* Réduire l'espacement */
+    }
+
+    .custom-font {
+        font-size: 1.5rem; /* Réduire la taille de la police */
+    }
+
+    /* Ajustement de la section Produits pour mobile */
+    .features-section {
+        padding: 40px 15px; /* Réduire l'espacement */
+        gap: 30px; /* Réduire l'espacement entre les éléments */
+    }
+
+    .feature {
+        width: 100%; /* Pleine largeur en mobile */
+    }
+
+    /* Ajustement de la section À propos pour mobile */
+    .about-section {
+        padding: 40px 15px; /* Réduire l'espacement */
+    }
+
+    .about-logo-text-container {
+        flex-direction: column; /* Empiler les éléments verticalement */
+        gap: 20px; /* Réduire l'espacement */
+        align-items: flex-start; /* Aligner à gauche */
+    }
+
+    .about-image {
+        width: 25%; /* Réduire la taille du logo */
+    }
+
+    .about-text {
+        padding-left: 0; /* Supprimer le padding */
+        border-left: none; /* Supprimer la bordure */
+        text-align: center; /* Centrer le texte */
+    }
+
+    /* Ajustement des boutons flottants pour mobile */
+    .floating-facebook-button {
+        right: 10px; /* Ajuster la position */
+        padding: 10px 13px; /* Réduire la taille */
+    }
+
+    .floating-contact-button {
+        right: 10px; /* Ajuster la position */
+        padding: 10px 20px; /* Réduire la taille */
+        font-size: 14px; /* Réduire la taille de la police */
+    }
+
+    .floating-video-button {
+        right: 10px; /* Ajuster la position */
+        padding: 10px; /* Réduire la taille */
+    }
+
+    .video-container {
+        right: 10px; /* Ajuster la position */
+        width: 200px; /* Réduire la largeur */
+        height: 356px; /* Réduire la hauteur */
+    }
+}

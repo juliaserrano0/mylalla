@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Découvrez nos délicieuses confitures artisanales faites avec amour à partir de fruits locaux. Savourez l'authenticité et la qualité de nos produits faits maison.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confitures Artisanales</title>
+    <!-- Liens vers les fichiers CSS -->
+    <link rel="stylesheet" href="css/styles.css"> <!-- Styles généraux -->
+    <link rel="stylesheet" href="css/mobile.css"> <!-- Styles spécifiques pour mobile -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- Font Awesome -->
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet"> <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playwrite+AU+SA:wght@400&display=swap" rel="stylesheet"> <!-- Google Fonts -->
+</head>
+<body>
+    <!-- Barre de navigation responsive -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="navbar-content">
+                <!-- Menu Desktop -->
+                <div class="desktop-menu">
+                    <a href="index.html" class="nav-link">Accueil</a>
+                    <a href="confitures.html" class="nav-link">Confitures</a>
+                    <a href="a-propos.html" class="nav-link">À propos</a>
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </div>
+
+                <!-- Bouton Hamburger (Mobile) -->
+                <button class="hamburger" aria-label="Menu">
+                    <span class="hamburger-icon"></span>
+                </button>
+            </div>
+
+            <!-- Menu Mobile -->
+            <div class="mobile-menu">
+                <a href="index.html" class="nav-link">Accueil</a>
+                <a href="confitures.html" class="nav-link">Confitures</a>
+                <a href="a-propos.html" class="nav-link">À propos</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Section Bannière Fruit avec Logo -->
+    <section class="fruit-banner">
+        <div class="fruit-banner-container">
+            <!-- Logo à gauche -->
+            <div class="logo-container">
+                <a href="index.html">
+                    <img src="images/logo-Mylalla.svg" alt="Logo Mylalla" class="logo">
+                </a>
+            </div>
+            <!-- Bannière de fruits -->
+            <img src="images/fruitban.png" alt="Bannière de fruits" class="fruit-banner-image">
+        </div>
+    </section>
+
+    <!-- Section Hero -->
+    <section id="section1" class="hero-section">
+        <!-- Texte pour la version mobile -->
+        <div class="hero-text-mobile">
+            <p class="hero-title">Savourez l'authenticité de nos confitures artisanales.</p>
+            <p class="hero-description">
+                Nos confitures sont fabriquées avec passion à partir de fruits locaux et de recettes traditionnelles. Découvrez des saveurs uniques qui raviront vos papilles.
+            </p>
+            <a href="confitures.html" class="cta-link">Découvrez nos saveurs</a>
+        </div>
+
+        <!-- Contenu pour la version desktop -->
+        <div class="hero-left">
+            <div class="hero-text-container">
+                <p class="hero-title">Savourez l'authenticité de nos confitures artisanales.</p>
+                <p class="hero-description">
+                    Nos confitures sont fabriquées avec passion à partir de fruits locaux et de recettes traditionnelles. Découvrez des saveurs uniques qui raviront vos papilles.
+                </p>
+                <a href="confitures.html" class="cta-link">Découvrez nos saveurs</a>
+            </div>
+        </div>
+        <div class="hero-right">
+            <div class="slideshow-container">
+                <div class="mySlides fade">
+                    <img src="images/1.jpg" alt="Image 1">
+                </div>
+                <div class="mySlides fade">
+                    <img src="images/2.jpg" alt="Image 2">
+                </div>
+                <div class="mySlides fade">
+                    <img src="images/3.jpg" alt="Image 3">
+                </div>
+                <!-- Boutons de navigation -->
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Introduction -->
+    <section class="introduction-section">
+        <p class="custom-font">
+            Pour ravir les petits comme les grands, rien de tel qu’un pot de confiture artisanale.<br>
+            Délicieuse sur une tranche de pain au petit-déjeuner ou au goûter,<br>
+            elle accompagne également à merveille les crêpes et sublime vos desserts.<br>
+            Envie de découvrir des confitures faites maison ?
+        </p>
+    </section>
+
+    <!-- Section Produits -->
+    <section id="section2" class="features-section">
+        <div class="feature">
+            <div class="feature-icon">
+                <img src="images/1.jpg" alt="Feature 1">
+            </div>
+        </div>
+        <div class="feature">
+            <div class="feature-icon">
+                <img src="images/2.jpg" alt="Feature 2">
+            </div>
+        </div>
+        <div class="feature">
+            <div class="feature-icon">
+                <img src="images/3.jpg" alt="Feature 3">
+            </div>
+        </div>
+    </section>
+
+    <!-- Section À propos -->
+    <section id="section3" class="about-section">
+        <div class="about-content">
+            <div class="about-logo-text-container">
+                <img src="images/logo-lea.svg" alt="Logo LEA" class="about-image">
+                <div class="about-text">
+                    <h2>Contactez-nous</h2>
+                    <p>Pour toute question ou commande, n'hésitez pas à nous contacter. Nous sommes à votre disposition.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Icône Facebook flottante -->
+    <a id="floating-facebook-button" class="floating-facebook-button" href="https://www.facebook.com/profile.php?id=61565747011627" target="_blank">
+        <i class="fab fa-facebook-f"></i>
+    </a>
+
+    <!-- Bouton flottant Contact -->
+    <button id="floating-contact-button" class="floating-contact-button" onclick="window.location.href='contact.html'">Contact</button>
+
+    <!-- Bouton flottant pour la vidéo Facebook -->
+    <button id="floating-video-button" class="floating-video-button">
+        <i class="fas fa-video"></i>
+    </button>
+
+    <!-- Conteneur pour l'iframe Facebook -->
+    <div id="video-container" class="video-container">
+        <iframe src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2F61565747011627%2Fvideos%2F582999690955656%2F&show_text=false&width=267&t=0" 
+                width="267" 
+                height="476" 
+                style="border:none;overflow:hidden" 
+                scrolling="no" 
+                frameborder="0" 
+                allowfullscreen="true" 
+                allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
+        </iframe>
+    </div>
+
+    <!-- Footer -->
+    <footer id="footer">
+        <p>&copy; 2025 Confitures Artisanales. Tous droits réservés.</p>
+    </footer>
+
+    <!-- Script JavaScript -->
+    <script src="js/mobile.js"></script>
+</body>
+</html>
